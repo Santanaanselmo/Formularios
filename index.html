@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="css/index.css">
+  <script src="js/index.js"></script>
+  <title>4-3 projeto</title>
+</head>
+<body>
+ <div class="page"> 
+	<header>
+	 <h1>Crie e compartilhe sei evento</h1>  
+	 <p>O primeiro passo é preecher esse formulário de inscrição</p>
+	</header>
+
+	<form id="my-form">
+<!--Para os navegadores a tag fieldset não coloca o legend como filho do display flex entao temos que colocar uma div nele e colocar as propriedades flex nele -->
+<fieldset>
+   <div class="legend-wrap">
+     <legend>Informações do Evento</legend>
+    
+   <div class="input-wrap">
+      <label for="event-title">Título do evento <span>(minímo 8 caractéres)</span></label>
+      <input type="text" id="event-title" placeholder="Digite o nome do evento" required minlength="8"><!--indica minimo de quanto pode por -->
+       </div>
+      
+ <div class="input-wrap">
+      <label for="event-link">Link do evento <span>(comece com https://)</span></label>
+      <input type="url" id="event-link"  >
+       </div>
+       
+ <div class="input-wrap">
+      <label for="event-link">Link do evento <span>(minímo 8 caractéres)</span></label>
+      <input type="text" id="event-link">
+       </div>
+       
+ <div class="input-wrap">
+      <label for="event-whattsapp">whattsapp para contato <span>(somente numeros)</span></label>
+      <input type="number" id="event-whattsapp" >
+       </div>
+       
+ <div class="input-wrap">
+      <label for="event-info">informações extras</label>
+      <textarea id="event-info"></textarea>
+       </div>
+<div class="input-wrap">
+      <label for="event-categoria">Categoria</label>
+     <select id="event-categoria">
+  
+        <option value="live">ao vivo</option>
+        <option value="podcast">podcast</option>
+        <option value="mentoria">mentoria</option>
+     </select>
+       
+	</div> 
+</fieldset>
+<fieldset>
+   <div class="legend-wrap">
+   <legend>Privacidade do evento</legend>
+   <div class="input-wrap">
+      <label for="event-email"> E-mail do adiministrador<span>(digite um email valido)</span></label>
+      <input type="email" id="event-email" >
+       </div>
+   <div class="input-wrap">
+      <label for="event-password">Senha de acesso para participantes<span>(maxímo 8 caractéres)</span></label>
+      <input type="password" id="event-password" required maxlength="8"><!--maximo que pode por -->
+       </div>
+       
+   <div class="checkbox-wrap">
+      <input type="checkbox" id="event-private">
+      <label for="event-private">Evento privado</label>
+       </div>
+   </div>
+</fieldset>
+<fieldset>
+   <div class="legend-wrap">
+   <legend>Dia e hora</legend>
+   <div class="col-3">
+   <div class="input-wrap">
+      <label for="event-date">Data</label>
+      <input type="date" id="event-date">
+       </div>
+   <div class="input-wrap">
+      <label for="event-begin">Dias</label>
+      <input type="time" id="event-begin">
+       </div>
+   <div class="input-wrap">
+      <label for="event-end">Até</label>
+      <input type="time" id="event-end">
+       </div>
+   </div>
+</fieldset>
+	</form>
+   
+		<!--fieldset essa tag significa um agrupamento de campos
+	field- quer dizer campos
+	set- agrupamento -->
+	
+	   <footer>
+	   <input form="my-form" class="button" type="submit" value="Salvar evento">
+	   </footer>
+   </body>
+</html>
